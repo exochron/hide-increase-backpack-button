@@ -1,9 +1,9 @@
 local frames = {
     ContainerFrame1AddSlotsButton,
-    ContainerFrame1ItemButton1,
-    ContainerFrame1ItemButton2,
-    ContainerFrame1ItemButton3,
-    ContainerFrame1ItemButton4,
+    ContainerFrame1Item1,
+    ContainerFrame1Item2,
+    ContainerFrame1Item3,
+    ContainerFrame1Item4,
 }
 
 for _, frame in ipairs(frames) do
