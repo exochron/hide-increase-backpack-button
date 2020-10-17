@@ -1,15 +1,11 @@
-local frames = {
-    ContainerFrame1AddSlotsButton,
-    ContainerFrame1Item1,
-    ContainerFrame1Item2,
-    ContainerFrame1Item3,
-    ContainerFrame1Item4,
-}
 
-for _, frame in ipairs(frames) do
-    if frame then
-        frame:Hide()
-        frame.Show = frame.Hide
-        frame.SetShown = frame.Hide
-    end
+-- overwrite original
+function IsAccountSecured()
+    return true
 end
+
+local f = CreateFrame("Frame")
+f:RegisterEvent("PLAYER_ENTERING_WORLD")
+f:SetScript("OnEvent", function ()
+    C_CVar.SetCVarBitfield("closedInfoFrames", LE_FRAME_TUTORIAL_BAG_SLOTS_AUTHENTICATOR, true)
+end)
