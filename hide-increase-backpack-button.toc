@@ -1,4 +1,4 @@
-## Interface: 90001
+## Interface: 90002
 
 ## Title: Hide Increase Backpack Button
 ## Notes: hides the little plus in your backpack
