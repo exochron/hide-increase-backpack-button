@@ -1,8 +1,8 @@
-## Interface: 90005
+## Interface: 11307
 ## Title: Hide Increase Backpack Button
 ## Notes: hides the little plus in your backpack
 ## Author: eXochron
 ## Version: @project-version@
 ## X-Curse-Project-ID: 285782
 
-retail.lua
+classic.lua
