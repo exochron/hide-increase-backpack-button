@@ -1,10 +1,12 @@
+local ADDON_NAME = ...
+
 local ITEM_SPACING_Y = 5;
 
-local f = CreateFrame("Frame")
-f:RegisterEvent("PLAYER_ENTERING_WORLD")
-f:SetScript("OnEvent", function()
+local loginHandle
+loginHandle = EventRegistry:RegisterFrameEventAndCallbackWithHandle("PLAYER_ENTERING_WORLD", function()
     C_CVar.SetCVarBitfield("closedInfoFrames", LE_FRAME_TUTORIAL_BAG_SLOTS_AUTHENTICATOR, true)
-end)
+    loginHandle:Unregister()
+end, ADDON_NAME)
 
 local function SortItemsByExtendedState(item1, item2)
     local extended1, extended2 = item1:IsExtended(), item2:IsExtended();
