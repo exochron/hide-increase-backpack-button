@@ -1,4 +1,4 @@
-## Interface: 11505,40401
+## Interface: 11506,40402
 ## Title: Hide Increase Backpack Button
 ## Notes: hides the little plus in your backpack
 ## Author: eXochron
