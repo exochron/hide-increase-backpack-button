@@ -1,4 +1,4 @@
-## Interface: 110200
+## Interface: 120000, 50503, 20505, 11508
 ## Title: Hide Increase Backpack Button
 ## Notes: hides the little plus in your backpack
 ## Author: eXochron
@@ -6,4 +6,5 @@
 ## X-Curse-Project-ID: 285782
 ## X-Wago-ID: 2jK8V4Ny
 
-retail.lua
+retail.lua [AllowLoadGameType mainline]
+classic.lua [AllowLoadGameType vanilla, tbc, classic]
