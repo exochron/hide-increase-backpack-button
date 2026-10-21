@@ -1,10 +1,10 @@
-## Interface: 120100,120007,50504,20506,11509
+## Interface: 120105,50504,20506,16001,11509
 ## Title: Hide Increase Backpack Button
-## Notes: hides the little plus in your backpack
+## Notes: hides the little plus button in your backpack
 ## Author: eXochron
 ## Version: @project-version@
 ## X-Curse-Project-ID: 285782
 ## X-Wago-ID: 2jK8V4Ny
 
 retail.lua [AllowLoadGameType mainline]
-classic.lua [AllowLoadGameType vanilla, tbc, classic]
+classic.lua [AllowLoadGameType classic]
