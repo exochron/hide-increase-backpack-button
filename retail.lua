@@ -36,7 +36,6 @@ local function CollectItems(self)
 end
 local function UpdateItemLayout(self)
     if not IsAccountSecured() and not InCombatLockdown() then
-        self.AddSlotsButton:Hide()
         local items = CollectItems(self)
         table.sort(items, SortItemsByExtendedState)
         AnchorUtil.GridLayout(items, self:GetInitialItemAnchor(), self:GetAnchorLayout())
@@ -44,6 +43,12 @@ local function UpdateItemLayout(self)
 end
 hooksecurefunc(ContainerFrame1, "UpdateItemLayout", UpdateItemLayout)
 hooksecurefunc(ContainerFrameCombinedBags, "UpdateItemLayout", UpdateItemLayout)
+
+local function HideAddSlots(self)
+    self.AddSlotsButton:Hide()
+end
+hooksecurefunc(ContainerFrame1, "UpdateAddSlots", HideAddSlots)
+hooksecurefunc(ContainerFrameCombinedBags, "UpdateAddSlots", HideAddSlots)
 
 hooksecurefunc(ContainerFrame1, "UpdateFrameSize", function(self)
     if not IsAccountSecured() and not InCombatLockdown() then
